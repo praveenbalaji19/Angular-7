@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">Edit Employee<button routerLink="" type="button"
+                class="btn btn-primary fa fa-arrow-left float-right"> Back</button>
+        </div>
+        <form [formGroup]="editform" (ngSubmit)="onSubmit()">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="id"><b>ID</b></label>
+                    <input type="text" formControlName="id" class="form-control" [(ngModel)]="emp.id" required><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="name"><b>Name</b></label>
+                    <input type="text" formControlName="name" class="form-control" [(ngModel)]="emp.name" required><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="dep"><b>Department</b></label>
+                    <input type="text" formControlName="dep" class="form-control" [(ngModel)]="emp.department"
+                        required><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="sal"><b>Salary</b></label>
+                    <input type="text" formControlName="sal" class="form-control" [(ngModel)]="emp.salary" required><br>
+                </div>
+
+
+                <div class="card-footer">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-space fa fa-dot-circle-o"> Update</button>
+                        <button type="reset" class="btn btn-danger btn-space fa fa-ban"> Reset</button>
+                        <button type="button" routerLink="" class="btn btn-secondary fa fa-remove"> Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
